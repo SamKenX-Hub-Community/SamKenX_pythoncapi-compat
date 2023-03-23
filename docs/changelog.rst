@@ -1,6 +1,15 @@
 Changelog
 =========
 
+* 2022-11-15: Add experimental operations to the upgrade_pythoncapi script:
+  ``Py_NewRef``, ``Py_CLEAR`` and ``Py_SETREF``.
+* 2022-11-09: Fix ``Py_SETREF()`` and ``Py_XSETREF()`` macros
+  for `gh-98724 <https://github.com/python/cpython/issues/98724>`_.
+* 2022-11-04: Add ``PyFrame_GetVar()`` and ``PyFrame_GetVarString()``
+  functions.
+* 2022-08-04: Add ``PyCode_GetVarnames()``, ``PyCode_GetFreevars()``
+  and ``PyCode_GetCellvars()`` functions.
+* 2022-06-14: Fix compatibility with C++ older than C++11.
 * 2022-05-03: Add ``PyCode_GetCode()`` function.
 * 2022-04-26: Rename the project from ``pythoncapi_compat`` to
   ``pythoncapi-compat``: replace the underscore separator with a dash.

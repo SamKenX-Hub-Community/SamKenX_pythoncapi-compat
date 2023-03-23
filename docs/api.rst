@@ -10,7 +10,7 @@ Supported Python versions:
 * Python 2.7, Python 3.4 - 3.11
 * PyPy 2.7, 3.6 and 3.7
 
-C++ is supported on Python 3.6 and newer.
+C++03 and C++11 are supported on Python 3.6 and newer.
 
 A C99 subset is required, like ``static inline`` functions: see `PEP 7
 <https://www.python.org/dev/peps/pep-0007/>`_.  ISO C90 is partially supported
@@ -24,12 +24,46 @@ Latest version of the header file:
 `pythoncapi_compat.h <https://raw.githubusercontent.com/python/pythoncapi-compat/master/pythoncapi_compat.h>`_.
 
 
+Python 3.12
+-----------
+
+.. c:function:: PyObject* PyFrame_GetVar(PyFrameObject *frame, PyObject *name)
+
+   See `PyFrame_GetVar() documentation <https://docs.python.org/dev/c-api/frame.html#c.PyFrame_GetVar>`__.
+
+   Not available on PyPy.
+
+.. c:function:: PyObject* PyFrame_GetVarString(PyFrameObject *frame, const char *name)
+
+   See `PyFrame_GetVarString() documentation <https://docs.python.org/dev/c-api/frame.html#c.PyFrame_GetVarString>`__.
+
+   Not available on PyPy.
+
+
 Python 3.11
 -----------
+
+.. c:function:: PyObject* PyCode_GetCellvars(PyCodeObject *code)
+
+   See `PyCode_GetCellvars() documentation <https://docs.python.org/dev/c-api/code.html#c.PyCode_GetCellvars>`__.
+
+   Not available on PyPy.
 
 .. c:function:: PyObject* PyCode_GetCode(PyCodeObject *code)
 
    See `PyCode_GetCode() documentation <https://docs.python.org/dev/c-api/code.html#c.PyCode_GetCode>`__.
+
+   Not available on PyPy.
+
+.. c:function:: PyObject* PyCode_GetFreevars(PyCodeObject *code)
+
+   See `PyCode_GetFreevars() documentation <https://docs.python.org/dev/c-api/code.html#c.PyCode_GetFreevars>`__.
+
+   Not available on PyPy.
+
+.. c:function:: PyObject* PyCode_GetVarnames(PyCodeObject *code)
+
+   See `PyCode_GetVarnames() documentation <https://docs.python.org/dev/c-api/code.html#c.PyCode_GetVarnames>`__.
 
    Not available on PyPy.
 
